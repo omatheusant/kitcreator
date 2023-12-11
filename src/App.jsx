@@ -19,7 +19,7 @@ function App() {
   const newCanvas = new fabric.Canvas('canvas', {
    height: size.height,
    width: size.width,
-   backgroundColor: 'pink'
+   backgroundColor: 'white'
   });
   setCanvas(newCanvas);
  };

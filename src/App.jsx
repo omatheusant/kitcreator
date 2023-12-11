@@ -6,7 +6,7 @@ import { AddImage } from './components/Controls/AddImage';
 import { AddText } from './components/Controls/AddText';
 import { Resize } from './components/Controls/Resize';
 import { Background } from './components/Controls/Background';
-import { Eraser } from './components/Controls/Eraser';
+import { Brush } from './components/Controls/Eraser';
 
 function App() {
  const [canvas, setCanvas] = useState(null);
@@ -35,7 +35,7 @@ function App() {
       <Resize setSize={setSize} />
       <AddText />
       <AddImage canvas={canvas} />
-      <Eraser />
+      <Brush canvas={canvas} />
       <Background />
     </SideBar>
 

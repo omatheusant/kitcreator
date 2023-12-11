@@ -31,7 +31,7 @@ export const Resize = ({ setSize }) => {
         </button>
         <span onClick={handleClick} className='cursor-pointer'>Tamanho</span>
         {showModal && (
-          <form className='ml-[23vw] fixed bg-[--bg-color] p-[2vw]' onSubmit={handleSubmit}>
+          <form className='ml-[23vw] absolute bg-[--bg-color] p-[2vw]' onSubmit={handleSubmit}>
             <div className='flex flex-col mb-4'>
               <label className='mb-2 uppercase font-bold text-[1.0vw] text-grey-darkest' htmlFor="width">Altura</label>
               <input className='border py-2 px-3 text-grey-darkest' type="number" name="width" value={newSize.width} onChange={handleChange} />

@@ -13,13 +13,14 @@ export const AddImage = ({ canvas }) => {
      fabricImage.set({
        angle: 0,
        padding: 10,
-       cornersize:10,
+       cornersize: 50,
        selectable: true,
        cornerColor: 'rgba(255, 255, 255, 0.7)', // set the color of the corners
-       cornerStrokeColor: 'rgba(255, 255, 255, 0.7)', // set the color of the corners
+       cornerStrokeColor: 'rgb(0, 0, 0)', // set the color of the corners
        transparentCorners: false, // make the corners not transparent
        borderColor: 'rgb(43, 0, 78)', // set the color of the border
        cornerStyle: 'circle', // set the style of the corners
+       touchCornerSize: 100
      });
      canvas.centerObject(fabricImage);
      canvas.add(fabricImage);

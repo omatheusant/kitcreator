@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { fabric } from 'fabric';
 import { Header } from './components/Header';
 import { SideBar } from './components/SideBar';
@@ -10,38 +9,41 @@ import { Background } from './components/Controls/Background';
 import { Eraser } from './components/Controls/Eraser';
 
 function App() {
-  const [canvas, setCanvas] = useState(null);
- 
-  const initCanvas = () => {
-    const newCanvas = new fabric.Canvas('canvas', {
-      height: 800,
-      width: 800,
-      backgroundColor: 'pink'
-    });
-    setCanvas(newCanvas);
-   };
-  
-   useEffect(() => {
-    initCanvas();
-   }, []);
- 
-  
-  return (
-    <>
-      <Header />
-      <SideBar>
-        <Resize />
-        <AddText />
-        <AddImage canvas={canvas} />
-        <Eraser />
-        <Background />
-      </SideBar>
+ const [canvas, setCanvas] = useState(null);
+ const [size, setSize] = useState({ width: 1700, height: 1200 });
 
-      <div className='w-full mt-10 flex justify-center z-0'>
-        <canvas id="canvas"></canvas>
-      </div>
-    </>
-  )
+ const initCanvas = () => {
+  if (canvas) {
+   canvas.dispose();
+  }
+  const newCanvas = new fabric.Canvas('canvas', {
+   height: size.height,
+   width: size.width,
+   backgroundColor: 'pink'
+  });
+  setCanvas(newCanvas);
+ };
+ 
+ useEffect(() => {
+  initCanvas();
+ }, [size]);
+
+ return (
+  <>
+    <Header />
+    <SideBar>
+      <Resize setSize={setSize} />
+      <AddText />
+      <AddImage canvas={canvas} />
+      <Eraser />
+      <Background />
+    </SideBar>
+
+    <div className='w-full mt-10 flex justify-center z-0'>
+      <canvas id="canvas"></canvas>
+    </div>
+  </>
+ );
 }
 
-export default App
+export default App;

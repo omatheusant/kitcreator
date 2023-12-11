@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GiResize } from 'react-icons/gi';
+import { GiResize } from 'react-icons/gi'
 
 export const Resize = ({ setSize }) => {
   const [showModal, setShowModal] = useState(false);

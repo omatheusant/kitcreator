@@ -33,7 +33,7 @@ function App() {
     <Header />
     <SideBar>
       <Resize setSize={setSize} />
-      <AddText />
+      <AddText canvas={canvas} />
       <AddImage canvas={canvas} />
       <Brush canvas={canvas} />
       <Background />

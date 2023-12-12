@@ -5,7 +5,7 @@ import { CiSaveDown2 } from "react-icons/ci";
 export const Header = ({ canvas }) => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.download = 'canvas.png';
+    link.download = 'kit.png';
     link.href = canvas.toDataURL('image/png', 1.0);
     link.click();
   };

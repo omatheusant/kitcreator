@@ -14,7 +14,7 @@ export const Eraser = ({ canvas }) => {
     setIsDrawing(!isDrawing);
     canvas.isDrawingMode = !isDrawing;
     canvas.freeDrawingBrush.width = brushSize;
-    canvas.freeDrawingBrush.color = 'white';
+    canvas.freeDrawingBrush.color = '#fff';
     setShowSize(!showSize);
   };
 
@@ -55,10 +55,10 @@ export const Eraser = ({ canvas }) => {
     };
   }, [canvas]);
 
-  const handleChange = (e) => {
-    setBrushSize(e.target.value);
-    canvas.freeDrawingBrush.width = e.target.value;
-  };
+  // const handleChange = (e) => {
+  //   setBrushSize(e.target.value);
+  //   canvas.freeDrawingBrush.width = e.target.value;
+  // };
 
   return (
     <li className='text-[--light] text-[1vw]'>
@@ -67,7 +67,7 @@ export const Eraser = ({ canvas }) => {
           <FaEraser />
         </button>
         <span>Apagar</span>
-        {showSize &&
+        {/* {showSize &&
           <div className='absolute flex justify-center items-center rounded left-[5vw] bg-[--bg-color] w-[15vw]' >
             <input
               type="range"
@@ -78,7 +78,7 @@ export const Eraser = ({ canvas }) => {
               onChange={handleChange}
               className=" w-[10vw]"
             />
-          </div>}
+          </div>} */}
       </div>
     </li>
   )

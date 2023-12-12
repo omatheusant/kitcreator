@@ -29,7 +29,7 @@ export const Background = ({ canvas }) => {
      </button>
      <span>Fundo</span>
      {isOpen && (
-       <div className='absolute flex justify-center gap-[2vw] items-center rounded left-[8vw] bg-[--bg-color] w-[15vw] h-[15vw p-[1vw]'>
+       <div className='absolute flex justify-center gap-[2vw] items-center rounded left-[8vw] bottom-[7vw] bg-[--bg-color] w-[15vw] h-[15vw p-[1vw]'>
          <HexColorPicker color={color} onChange={handleChange} style={customStyle}/>
        </div>
      )}

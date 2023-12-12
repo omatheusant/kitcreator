@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { MdOutlineTextFields } from 'react-icons/md';
 import { fabric } from 'fabric';
 
-export const AddText = ({ canvas }) => {
+export function AddText({ canvas }) {
+  
  const [isAdding, setIsAdding] = useState(false);
 
  const handleClick = () => {
@@ -12,9 +13,16 @@ export const AddText = ({ canvas }) => {
   left: 10,
   top: 10,
   fill: 'black',
-  fontSize: 20,
-  width: 200,
-  height: 100
+  fontSize: 50,
+  width: 300,
+  height: 200,
+  fontFamily: 'Saira',
+  cornerColor: 'rgba(255, 255, 255, 0.7)',
+  cornerStrokeColor: 'rgb(0, 0, 0)',
+  transparentCorners: false,
+  cornerSize: 30,
+  cornerStyle: 'circle',
+  borderColor: 'rgb(43, 0, 78)'
  });
  canvas.add(text);
  }

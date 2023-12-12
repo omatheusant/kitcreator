@@ -41,7 +41,7 @@ export const Resize = ({ setSize }) => {
               <input className='border py-2 px-3 text-grey-darkest text-[1.2vw]' type="number" name="height" value={newSize.height} onChange={handleChange} />
             </div>
             <div className='flex justify-end'>
-              <button type="submit" className='border py-2 px-3 text-grey-darkest'>Submit</button>
+              <button type="submit" className='border py-2 px-3 text-grey-darkest'>Aplicar</button>
               <button onClick={handleCancel} className='border py-2 px-3 text-grey-darkest'>Cancel</button>
             </div>
           </form>

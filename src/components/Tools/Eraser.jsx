@@ -15,8 +15,9 @@ export const Eraser = ({ canvas }) => {
     canvas.isDrawingMode = !isDrawing;
     canvas.freeDrawingBrush.width = brushSize;
     canvas.freeDrawingBrush.color = '#fff';
+    canvas.contextContainer.globalCompositeOperation = isDrawing ? 'destination-out' : 'source-over';
     setShowSize(!showSize);
-  };
+   };
 
   const handleMouseDown = (e) => {
     setIsDrawing(true);
@@ -33,8 +34,9 @@ export const Eraser = ({ canvas }) => {
     if (!isDrawing) return;
     const pointer = canvas.getPointer(e);
     brush.current.path = 'M ' + brush.current.path + ' L ' + pointer.x + ' ' + pointer.y;
+    canvas.contextContainer.globalCompositeOperation = 'destination-out';
     canvas.renderAll();
-  };
+   };
 
   const handleMouseUp = () => {
     setIsDrawing(false);

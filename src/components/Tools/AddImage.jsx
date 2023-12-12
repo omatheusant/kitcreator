@@ -1,4 +1,4 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
 import { fabric } from 'fabric';
 import { FaCloudUploadAlt } from 'react-icons/fa';
 

@@ -1,12 +1,13 @@
+/* eslint-disable react/prop-types */
 import { FaEraser } from 'react-icons/fa'
 import { fabric } from 'fabric';
 import { useEffect, useRef, useState } from 'react';
 
-export const Brush = ({ canvas }) => {
+export const Eraser = ({ canvas }) => {
   const [isDrawing, setIsDrawing] = useState(false);
   const [brushSize, setBrushSize] = useState(50);
   const [showSize, setShowSize] = useState(false);
-  ;
+  
   const brush = useRef(null);
 
   const handleClick = () => {

@@ -6,7 +6,7 @@ import { AddImage } from './components/Tools/AddImage';
 import { AddText } from './components/Tools/AddText';
 import { Resize } from './components/Tools/Resize';
 import { Background } from './components/Tools/Background';
-import { Brush } from './components/Tools/Eraser';
+import { Eraser } from './components/Tools/Eraser';
 
 function App() {
  const [canvas, setCanvas] = useState(null);
@@ -35,8 +35,8 @@ function App() {
       <Resize setSize={setSize} />
       <AddText canvas={canvas} />
       <AddImage canvas={canvas} />
-      <Brush canvas={canvas} />
-      <Background />
+      <Eraser canvas={canvas} />
+      <Background canvas={canvas} />
     </SideBar>
 
     <div className='w-full mt-10 flex justify-center z-0'>

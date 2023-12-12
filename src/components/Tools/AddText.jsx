@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import { useState } from 'react';
 import { MdOutlineTextFields } from 'react-icons/md';
 import { fabric } from 'fabric';
 
@@ -38,4 +39,4 @@ export function AddText({ canvas }) {
  </div>
  </li>
  );
-};
+}

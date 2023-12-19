@@ -23,7 +23,7 @@ export const AddImage = ({ canvas }) => {
         canvas.add(img);
         canvas.setActiveObject(img);
         canvas.renderAll();
-        e.target.value = ''; // Reset the file input's value
+        e.target.value = '';
       });
     }
    }

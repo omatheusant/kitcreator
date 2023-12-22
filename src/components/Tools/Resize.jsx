@@ -35,11 +35,11 @@ export const Resize = ({ setSize }) => {
           <form className='ml-[23vw] absolute bg-[--bg-color] p-[2vw]' onSubmit={handleSubmit}>
             <div className='flex flex-col mb-4'>
               <label className='mb-2 uppercase font-bold text-[1.0vw] text-grey-darkest' htmlFor="width">Altura</label>
-              <input className='border py-2 px-3 text-grey-darkest' type="number" name="width" value={newSize.width} onChange={handleChange} />
+              <input className='border py-2 px-3 text-grey-darkest' type="number" name="width" value={newSize.height} onChange={handleChange} />
             </div>
             <div className='flex flex-col mb-4'>
               <label className='mb-2 uppercase font-bold text-[1.0vw] text-grey-darkest' htmlFor="height">Largura</label>
-              <input className='border py-2 px-3 text-grey-darkest text-[1.2vw]' type="number" name="height" value={newSize.height} onChange={handleChange} />
+              <input className='border py-2 px-3 text-grey-darkest text-[1.2vw]' type="number" name="height" value={newSize.width} onChange={handleChange} />
             </div>
             <div className='flex justify-end'>
               <button type="submit" className='border py-2 px-3 text-grey-darkest'>Aplicar</button>
